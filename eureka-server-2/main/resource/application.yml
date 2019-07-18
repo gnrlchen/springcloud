@@ -1,0 +1,20 @@
+#端口号
+server:
+  port: 8088
+#Eureka实例名，集群中根据这里相互识别
+eureka:
+  instance:
+    hostname: eureka2
+  server:
+    enable-self-preservation: false
+  #客户端
+  client:
+    #是否开启注册服务，因为这里如果为true表示自己注册自己，而自己就是一个服务注册方，没必要自己注册自己
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8089/eureka
+spring:
+  freemarker:
+    prefer-file-system-access: false
+  application:
+    name: eureka-service

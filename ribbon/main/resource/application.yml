@@ -1,0 +1,12 @@
+server:
+  port: 8093
+spring:
+  application:
+    name: Ribbon-Consumer
+
+eureka:
+#客户端
+  client:
+#注册中心地址
+    service-url:
+      defaultZone: http://localhost:8088/eureka/,http://localhost:8089/eureka/
